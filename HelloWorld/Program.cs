@@ -1,4 +1,5 @@
 ﻿using System;
+using HelloWorld.Math;
 
 namespace HelloWorld
 {
@@ -6,17 +7,14 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            try
-            {
-                string stri = "false";
-                bool b = Convert.ToBoolean(stri);
-                Console.WriteLine(b);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("The string could not be converted to boolean");
-            }
-
+            var john = new Person();
+            john.FirstName = "John";
+            john.LastName = "Smith";
+            john.Introduce();
+            
+            Calculator calculator = new Calculator();
+            var result = calculator.Add(1, 2);
+            Console.WriteLine(result);
         }
     }
 }
